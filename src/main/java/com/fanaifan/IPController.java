@@ -27,7 +27,7 @@ public class IPController {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public String getIPArea(IP ip){
+	public String postIPArea(IP ip){
 		JSONObject json = new JSONObject();
 		json.put("ip", ip.getIp());
 		json.put("area", IPSeeker.getInstance().getCountry(ip.getIp()));
